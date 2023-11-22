@@ -1,52 +1,45 @@
 package main;
 
+import commands.*;
+import models.Airline;
+
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Menu {
-    public void displayMenu() {
-        Scanner scanner = new Scanner(System.in);
-        int choice;
+        public void displayMenu() {
+            CommandInvoker commandInvoker = new CommandInvoker();
+            Airline airline = new Airline();
+            Scanner scanner = new Scanner(System.in);
+            int choice;
 
-        do {
-            // Display options
-            System.out.println("1. Add Plane");
-            System.out.println("2. Delete Plane");
-            System.out.println("3. List All Planes");
-            System.out.println("4. Total Capacity");
-            System.out.println("5. Sort by Flight Range");
-            System.out.println("6. Search by Fuel Consumption");
-            System.out.println("7. Exit");
+            Map<Integer, Command> commands = new HashMap<>();
+            commands.put(1, new AddPlaneCommand(airline));
+            commands.put(2, new DeletePlaneCommand(airline));
+            commands.put(3, new ListPlanesCommand(airline));
+            commands.put(4, new TotalCapacityCommand(airline));
+            commands.put(5, new SortByFlightRangeCommand(airline));
+            commands.put(6, new SearchByFuelConsumptionCommand(airline));
 
-            System.out.print("Enter your choice: ");
-            choice = scanner.nextInt();
+            do {
+                System.out.println("\n============ Оберіть операцію: ============");
+                for (var entry : commands.entrySet()) {
+                    System.out.println(entry.getKey() + ". " + entry.getValue().getDescription());
+                }
+                System.out.println("0. Вийти з програми");
+                System.out.println("===========================================");
+                System.out.print("» ");
+                choice = scanner.nextInt();
+                System.out.println(" ");
 
-            // Execute selected command based on choice
-            switch (choice) {
-                case 1:
-                    // Execute AddPlaneCommand
-                    break;
-                case 2:
-                    // Execute DeletePlaneCommand
-                    break;
-                case 3:
-                    // Execute ListPlanesCommand
-                    break;
-                case 4:
-                    // Execute TotalCapacityCommand
-                    break;
-                case 5:
-                    // Execute SortByFlightRangeCommand
-                    break;
-                case 6:
-                    // Execute SearchByFuelConsumptionCommand
-                    break;
-                case 7:
-                    System.out.println("Exiting...");
-                    break;
-                default:
-                    System.out.println("Invalid choice. Please try again.");
-                    break;
-            }
-        } while (choice != 7);
-    }
+                if (commands.containsKey(choice)) {
+                    commandInvoker.executeCommand(commands.get(choice));
+                } else if (choice == 0) {
+                    System.out.println("Програма завершена.");
+                } else {
+                    System.out.println("Не правильно введено. Спробуйте ще раз.");
+                }
+            } while (choice != 0);
+        }
 }

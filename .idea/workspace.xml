@@ -4,10 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01e06cbb-4770-4395-acb4-73440c3393de" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="01e06cbb-4770-4395-acb4-73440c3393de" name="Changes" comment="structure added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AirlineManagementSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/AddPlaneCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/AddPlaneCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/DeletePlaneCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/DeletePlaneCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/ListPlanesCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/ListPlanesCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/SearchByFuelConsumptionCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/SearchByFuelConsumptionCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/SortByFlightRangeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/SortByFlightRangeCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/TotalCapacityCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/TotalCapacityCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/AirlineManagementSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AirlineManagementSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Aircraft.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Aircraft.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Airline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Airline.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/CargoAircraft.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/PassengerAircraft.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +35,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2YRPCqfMiq9pBxB7LcrPr6lYIa6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -44,6 +58,8 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "terminal",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -55,11 +71,28 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1700485296504</updated>
-      <workItem from="1700485297520" duration="1042000" />
+      <workItem from="1700485297520" duration="32630000" />
     </task>
+    <task id="LOCAL-00001" summary="structure added">
+      <option name="closed" value="true" />
+      <created>1700486544650</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1700486544650</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="structure added" />
+    <option name="LAST_COMMIT_MESSAGE" value="structure added" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
